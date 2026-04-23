@@ -1,0 +1,103 @@
+import math
+
+
+class Calculator:
+    def add(self, a, b):
+        return a + b
+
+    def subtract(self, a, b):
+        return a - b
+
+    def multiply(self, a, b):
+        return a * b
+
+    def divide(self, a, b):
+        if b == 0:
+            return "Error: division by zero"
+        return a / b
+
+    def factorial(self, n):
+        if n < 0:
+            return "Error: factorial not defined for negative numbers"
+        if not float(n).is_integer():
+            return "Error: factorial only defined for integers"
+        return math.factorial(int(n))
+
+    def complex_add(self, c1, c2):
+        return c1 + c2
+
+    def complex_multiply(self, c1, c2):
+        return c1 * c2
+
+
+def get_number(prompt):
+    return float(input(prompt))
+
+
+def get_complex(prompt):
+    real = float(input(f"{prompt} (real): "))
+    imag = float(input(f"{prompt} (imag): "))
+    return complex(real, imag)
+
+
+def display_menu():
+    print("\n1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+    print("5. Factorial")
+    print("6. Complex Add")
+    print("7. Complex Multiply")
+    print("8. Exit")
+
+
+def run():
+    calc = Calculator()
+
+    while True:
+        display_menu()
+        choice = input("Choose: ").strip()
+
+        if choice == "1":
+            a = get_number("a: ")
+            b = get_number("b: ")
+            print(calc.add(a, b))
+
+        elif choice == "2":
+            a = get_number("a: ")
+            b = get_number("b: ")
+            print(calc.subtract(a, b))
+
+        elif choice == "3":
+            a = get_number("a: ")
+            b = get_number("b: ")
+            print(calc.multiply(a, b))
+
+        elif choice == "4":
+            a = get_number("a: ")
+            b = get_number("b: ")
+            print(calc.divide(a, b))
+
+        elif choice == "5":
+            n = get_number("n: ")
+            print(calc.factorial(n))
+
+        elif choice == "6":
+            c1 = get_complex("First complex")
+            c2 = get_complex("Second complex")
+            print(calc.complex_add(c1, c2))
+
+        elif choice == "7":
+            c1 = get_complex("First complex")
+            c2 = get_complex("Second complex")
+            print(calc.complex_multiply(c1, c2))
+
+        elif choice == "8":
+            break
+
+        else:
+            print("Invalid choice")
+
+
+if __name__ == "__main__":
+    run()
