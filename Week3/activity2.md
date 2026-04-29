@@ -1,1 +1,1 @@
-![alt text](<CleanShot 2026-04-30 at 10.08.50@2x.png>)
+![alt text](<activity2.png>)
