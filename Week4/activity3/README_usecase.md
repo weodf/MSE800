@@ -34,7 +34,7 @@ usecase_diagrams/
 
 ## Diagram 1 — Customer Currency Exchange
 
-**File:** `diagram1_customer_exchange.svg`
+**UML:** <img src="diagram1_customer_exchange.svg" alt="icon" />
 
 **Purpose:**
 This diagram shows how a Customer interacts with the Money Exchange System
@@ -70,7 +70,7 @@ from login through to receiving a transaction confirmation.
 
 ## Diagram 2 — Admin and System Management
 
-**File:** `diagram2_admin_management.svg`
+**UML:** <img src="diagram2_admin_management.svg" alt="icon" />
 
 **Purpose:**
 This diagram shows how an Admin manages the back-end of the Money Exchange System,
@@ -103,7 +103,7 @@ and generating reports. A secondary System actor represents automated processes.
 - Record audit log → writes to `audit_log` table
 - Manage user accounts → reads/writes to `user` and `account` tables
 
----
+---++
 
 ## UML Notation Guide
 
