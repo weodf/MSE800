@@ -1,0 +1,120 @@
+<svg width="900" height="700" viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="900" height="700" fill="#ffffff"/>
+
+  <!-- ══ Title ══ -->
+  <text x="450" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">Use Case Diagram 1 — Currency Exchange (Customer)</text>
+  <text x="450" y="48" text-anchor="middle" font-size="11" fill="#555">Purpose: Shows how a Customer interacts with the Money Exchange System to exchange currency and manage accounts.</text>
+  <text x="450" y="65" text-anchor="middle" font-size="11" fill="#555">Key Actors: Customer (primary user who initiates currency exchange transactions)</text>
+
+  <!-- ══ System boundary ══ -->
+  <rect x="175" y="80" width="560" height="570" rx="6" fill="none" stroke="#333" stroke-width="1.8" stroke-dasharray="10,4"/>
+  <rect x="280" y="72" width="250" height="20" rx="3" fill="#ffffff"/>
+  <text x="405" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#111">Money Exchange System</text>
+
+  <!-- ══ ACTOR: Customer (left outside boundary) ══ -->
+  <!-- head -->
+  <circle cx="80" cy="250" r="18" fill="none" stroke="#111" stroke-width="1.8"/>
+  <!-- body -->
+  <line x1="80" y1="268" x2="80" y2="318" stroke="#111" stroke-width="1.8"/>
+  <!-- arms -->
+  <line x1="50" y1="288" x2="110" y2="288" stroke="#111" stroke-width="1.8"/>
+  <!-- legs -->
+  <line x1="80" y1="318" x2="54" y2="352" stroke="#111" stroke-width="1.8"/>
+  <line x1="80" y1="318" x2="106" y2="352" stroke="#111" stroke-width="1.8"/>
+  <!-- label -->
+  <text x="80" y="372" text-anchor="middle" font-size="13" font-weight="bold" fill="#111">Customer</text>
+
+  <!-- ══ USE CASES (solid border = primary, dashed = sub-usecase) ══ -->
+
+  <!-- UC1: Login to system -->
+  <ellipse cx="330" cy="130" rx="120" ry="28" fill="#EEF2FF" stroke="#111" stroke-width="1.3"/>
+  <text x="330" y="130" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#111">Login to system</text>
+
+  <!-- UC2: View account balance -->
+  <ellipse cx="330" cy="220" rx="120" ry="28" fill="#EEF2FF" stroke="#111" stroke-width="1.3"/>
+  <text x="330" y="220" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#111">View account balance</text>
+
+  <!-- UC3: Check exchange rate -->
+  <ellipse cx="330" cy="320" rx="120" ry="28" fill="#EEF2FF" stroke="#111" stroke-width="1.3"/>
+  <text x="330" y="320" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#111">Check exchange rate</text>
+
+  <!-- UC4: Exchange currency (CORE use case) -->
+  <ellipse cx="330" cy="430" rx="120" ry="28" fill="#DBEAFE" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="330" y="424" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="bold" fill="#1d4ed8">Exchange currency</text>
+  <text x="330" y="440" text-anchor="middle" dominant-baseline="central" font-size="10" fill="#1d4ed8">(core use case)</text>
+
+  <!-- UC5: View transaction history -->
+  <ellipse cx="330" cy="560" rx="120" ry="28" fill="#EEF2FF" stroke="#111" stroke-width="1.3"/>
+  <text x="330" y="560" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#111">View transaction history</text>
+
+  <!-- UC6: Calculate fee — «include» sub-usecase -->
+  <ellipse cx="610" cy="360" rx="120" ry="28" fill="#F0FDF4" stroke="#166534" stroke-width="1.3" stroke-dasharray="6,3"/>
+  <text x="610" y="360" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#166534">Calculate fee</text>
+
+  <!-- UC7: Apply exchange rate — «include» sub-usecase -->
+  <ellipse cx="610" cy="450" rx="120" ry="28" fill="#F0FDF4" stroke="#166534" stroke-width="1.3" stroke-dasharray="6,3"/>
+  <text x="610" y="450" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#166534">Apply exchange rate</text>
+
+  <!-- UC8: Record transaction — «include» sub-usecase -->
+  <ellipse cx="610" cy="540" rx="120" ry="28" fill="#F0FDF4" stroke="#166534" stroke-width="1.3" stroke-dasharray="6,3"/>
+  <text x="610" y="540" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#166534">Record transaction</text>
+
+  <!-- UC9: Cancel exchange — «extend» sub-usecase -->
+  <ellipse cx="610" cy="240" rx="120" ry="28" fill="#FEF9C3" stroke="#854d0e" stroke-width="1.3" stroke-dasharray="6,3"/>
+  <text x="610" y="240" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#854d0e">Cancel exchange</text>
+
+  <!-- UC10: Receive confirmation — «extend» sub-usecase -->
+  <ellipse cx="610" cy="145" rx="120" ry="28" fill="#FEF9C3" stroke="#854d0e" stroke-width="1.3" stroke-dasharray="6,3"/>
+  <text x="610" y="145" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#854d0e">Receive confirmation</text>
+
+  <!-- ══ ASSOCIATION LINES: Customer → Use Cases (solid lines, no arrowhead per UML) ══ -->
+  <line x1="98" y1="242" x2="210" y2="148" stroke="#333" stroke-width="1.3"/>
+  <line x1="98" y1="252" x2="210" y2="222" stroke="#333" stroke-width="1.3"/>
+  <line x1="98" y1="262" x2="210" y2="315" stroke="#333" stroke-width="1.3"/>
+  <line x1="98" y1="272" x2="210" y2="424" stroke="#333" stroke-width="1.3"/>
+  <line x1="98" y1="282" x2="210" y2="555" stroke="#333" stroke-width="1.3"/>
+
+  <!-- ══ INCLUDE arrows: Exchange currency → sub-usecases ══ -->
+  <!-- Arrow marker for dashed lines -->
+  <defs>
+    <marker id="inc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M1 2L9 5L1 8" fill="none" stroke="#166534" stroke-width="1.5"/>
+    </marker>
+    <marker id="ext" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M1 2L9 5L1 8" fill="none" stroke="#854d0e" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <!-- Exchange currency -include--> Calculate fee -->
+  <line x1="450" y1="418" x2="490" y2="368" stroke="#166534" stroke-width="1.2" stroke-dasharray="6,3" marker-end="url(#inc)"/>
+  <text x="502" y="393" text-anchor="middle" font-size="10" fill="#166534" transform="rotate(-30,502,393)">«include»</text>
+
+  <!-- Exchange currency -include--> Apply exchange rate -->
+  <line x1="450" y1="432" x2="490" y2="450" stroke="#166534" stroke-width="1.2" stroke-dasharray="6,3" marker-end="url(#inc)"/>
+  <text x="508" y="436" text-anchor="middle" font-size="10" fill="#166534">«include»</text>
+
+  <!-- Exchange currency -include--> Record transaction -->
+  <line x1="442" y1="450" x2="490" y2="528" stroke="#166534" stroke-width="1.2" stroke-dasharray="6,3" marker-end="url(#inc)"/>
+  <text x="500" y="500" text-anchor="middle" font-size="10" fill="#166534" transform="rotate(20,500,500)">«include»</text>
+
+  <!-- Exchange currency -extend--> Cancel exchange -->
+  <line x1="440" y1="415" x2="490" y2="252" stroke="#854d0e" stroke-width="1.2" stroke-dasharray="6,3" marker-end="url(#ext)"/>
+  <text x="500" y="330" text-anchor="middle" font-size="10" fill="#854d0e">«extend»</text>
+
+  <!-- Record transaction -extend--> Receive confirmation -->
+  <line x1="610" y1="512" x2="610" y2="173" stroke="#854d0e" stroke-width="1.2" stroke-dasharray="6,3" marker-end="url(#ext)"/>
+  <text x="636" y="345" text-anchor="start" font-size="10" fill="#854d0e">«extend»</text>
+
+  <!-- ══ LEGEND ══ -->
+  <rect x="180" y="660" width="540" height="32" rx="4" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+  <text x="200" y="672" dominant-baseline="central" font-size="10" font-weight="bold" fill="#333">Legend:</text>
+
+  <ellipse cx="260" cy="676" rx="30" ry="10" fill="#EEF2FF" stroke="#111" stroke-width="1"/>
+  <text x="298" y="676" dominant-baseline="central" font-size="10" fill="#333">Primary use case</text>
+
+  <ellipse cx="400" cy="676" rx="30" ry="10" fill="#F0FDF4" stroke="#166534" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="438" y="676" dominant-baseline="central" font-size="10" fill="#166534">«include» (always runs)</text>
+
+  <ellipse cx="580" cy="676" rx="30" ry="10" fill="#FEF9C3" stroke="#854d0e" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="618" y="676" dominant-baseline="central" font-size="10" fill="#854d0e">«extend» (optional)</text>
+</svg>
