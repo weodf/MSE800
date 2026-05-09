@@ -1,0 +1,60 @@
+flowchart TB
+
+    Start((Start))
+
+    subgraph Patient["Patient"]
+        A[Select GP Clinic or Online GP Service]
+        C[Choose Appointment Type]
+        D[Select Date and Time]
+        H[Pay Booking or Consultation Fee]
+        K[Attend Consultation]
+        O[Select Preferred Pharmacy]
+        R[Receive Pickup or Delivery Notification]
+    end
+
+    subgraph Clinic["GP / Clinic System"]
+        B[Check Patient Enrolment Status]
+        E[Check Slot Availability]
+        F{Slot Available?}
+        G[Calculate Booking or Consultation Fee]
+        I{Payment Successful?}
+        J[Confirm Appointment]
+        L[Doctor or Nurse Conducts Consultation]
+        M{Prescription Needed?}
+        N[Issue Electronic Prescription]
+        P[Send Prescription to Pharmacy]
+        Q[Process Medication Order]
+        S[Record Consultation Notes]
+    end
+
+    End((End))
+
+    Start --> A
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+
+    F -- No --> C
+    F -- Yes --> G
+
+    G --> H
+    H --> I
+
+    I -- No --> H
+    I -- Yes --> J
+
+    J --> K
+    K --> L
+    L --> M
+
+    M -- No --> S
+    S --> End
+
+    M -- Yes --> N
+    N --> O
+    O --> P
+    P --> Q
+    Q --> R
+    R --> End
